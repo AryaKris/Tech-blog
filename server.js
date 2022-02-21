@@ -1,3 +1,4 @@
+//main file server.js because it helps us go launch a server 
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
