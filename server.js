@@ -2,7 +2,7 @@
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-const exphbs = require('express-handlebars');
+const exphbs = require('express-handlebars'); //grabbing our instance
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
@@ -27,7 +27,7 @@ const sess = {
 
 app.use(session(sess));
 
-// Inform Express.js on which template engine to use
+// Inform Express.js on which template engine to use - building the handlebars into our app. Always remember to register our view engine before we register our routes 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
